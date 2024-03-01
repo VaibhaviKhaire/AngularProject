@@ -1,0 +1,40 @@
+
+
+  
+  <div class="mt-5">
+    <label>Enter product  Id</label>
+    <input  class="ml-5" type="number" [(ngModel)]="product.id" placeholder="ID"><br>
+    <label>Enter Product Name</label>
+    <input class="ml-4" type="text" [(ngModel)]="product.name" placeholder="Name"><br>
+    <label>Enter product price</label>
+    <input type="number" [(ngModel)]="product.price" placeholder="Price"><br>
+    <label>Enter product description</label>
+    <input type="text" [(ngModel)]="product.description" placeholder="Description"><br>
+    <button (click)="addProduct()">Add Product</button>
+  </div>
+  <br>
+  @if(products.length>0){
+    <table border="1">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Description</th>
+        </tr>
+        @for(p of products;track products){
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.name }}</td>
+                <td>{{ p.price }}</td>
+                <td>{{ p.description }}</td>
+              </tr>
+        }
+        
+      </table>
+      
+  }
+  
+     
+    
+
+  

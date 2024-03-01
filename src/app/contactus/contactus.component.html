@@ -1,0 +1,34 @@
+
+<div class="container mt-3 ">
+    <div class="row justify-content-center ">
+      <div class="col-md-6"> <!-- Adjust the column size as needed -->
+        <h2 class="text-center">Contact Us </h2>
+        <form>
+          <div class="mb-3 ">
+            <label  for="name" class="form-label">Name</label>
+            <input type="text" class="form-control ml-3" id="username" [(ngModel)]="user.name" name="name">
+          </div>
+          <div class="mb-3">
+            <label  for="email" class="form-label ">Email</label>
+            <input type="email" class="form-control " id="email" [(ngModel)]="user.email" name="email">
+          </div>
+          <div class="mb-3 ">
+            <label for="message" class="form-label ">Message</label>
+            <input type="number" class="form-control " id="age" [(ngModel)]="user.message" name="message">
+          </div>
+          
+          
+          
+        </form>
+  
+        <div class="mt-4 text-white">
+          <h3 class="text-center">You submitted the following:</h3>
+          
+          <p>Username: {{ user.name }}</p>
+          <p>Email: {{ user.email }}</p>
+          <p>Age: {{ user.message }}</p>
+         
+        </div>
+      </div>
+    </div>
+  </div>
